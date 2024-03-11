@@ -1,3 +1,9 @@
 task1/bin
 task1/obj
 lesson-csharp.sln
+task2/obj
+task2/task2.csproj
+task1/task1.csproj
+task2/obj
+task2/task2.csproj
+.gitignore
