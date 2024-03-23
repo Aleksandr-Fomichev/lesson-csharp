@@ -178,75 +178,6 @@
 
 
 
-//Задайте одномерный массив из 10 целых чисел от 1 до 100.
- //Найдите количество элементов массива, значения которых лежат в отрезке [10,90].
-
-
-using System;
-using System.Linq;
-
-//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
-class UserInputToCompileForTest
-{ 
-    // Подсчет количества элементов массива, попадающих в заданный диапазон
-    // numbers - массив, в котором ведется подсчет
-    // minRange - минимальная граница диапазона
-    // maxRange - максимальная граница диапазона
-    public static int CountItemsRange(int[] numbers, int minRange, int maxRange)
-    {
-     int cnt = 0;
-	   for ( int i = 0; i < numbers.Length; i++)
-	   {
-		 if (numbers[i] >= minRange && numbers[i] <= maxRange)
-         {
-             cnt++;
-         }
-       }
-	            
-       return cnt;
-    
-    }
-    
-    public static void PrintResult(int [] array)
-    {
-        
-    
-        int cnt = CountItemsRange(array, 10, 90);
-        Console.Write(cnt);
-    }
-
-}
-
-
-//Не удаляйте и не меняйте класс Answer!
-class Answer
-{
-    public static void Main(string[] args)
-    {
-        int[] array;
-        
-
-        if (args.Length >= 1) {
-            // Объединяем все аргументы командной строки в одну строку
-            string joinedArgs = string.Join(" ", args);
-
-            // Разделяем строку по запятой с пробелом и преобразуем в массив целых чисел
-            array = joinedArgs.Split(", ")
-                                  .Select(int.Parse)
-                                  .ToArray();
-            
-            // Теперь arr содержит преобразованные в целые числа из командной строки
-        
-        } else {
-           // Если аргументов на входе нет
-            array = new int[] {1, 5, 10, 20, 30, 40, 99, 4, 90, 3}; // Создание массива
-        }
-        UserInputToCompileForTest.PrintResult(array);
-    }
-}
-
-
-
 
 
 
@@ -318,6 +249,69 @@ class Answer
 //         } else {
 //            // Если аргументов на входе нет
 //             array = new double[] {0.25, 5.4, 1.3, 2.1, 3.8, 5.2, 3.01}; // Создание массива
+//         }
+//         UserInputToCompileForTest.PrintResult(array);
+//     }
+// }
+
+
+
+// НЕРЕШЕННАЯ ЗАДАЧА.
+
+// using System;
+// using System.Linq;
+
+// //Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
+// class UserInputToCompileForTest
+// { 
+//     // Подсчет количества четных элементов массива
+//     // numbers - массив, в котором ведется подсчет
+//     public static int CountEvenItems(int[] numbers)
+//     {
+//         //Напишите свое решение здесь
+//       int arr = 0;
+//       int count = 0;
+//       for(int i = 0; i < arr.Length; i++)
+//       {
+//         if (numbers[i] % 2 == 0)
+//         {
+//           count = count + 1;
+//         }
+
+//       }
+//       return count;
+//     }
+    
+//     public static void PrintResult(int[] array)
+//     {
+//         //Напишите свое решение здесь 
+//     int count = CountEvenItems(array);
+//       Console.Write(count);
+//     }
+// }
+
+// //Не удаляйте и не меняйте класс Answer!
+// class Answer
+// {
+//     public static void Main(string[] args)
+//     {
+//         int[] array;
+        
+
+//         if (args.Length >= 1) {
+//             // Объединяем все аргументы командной строки в одну строку
+//             string joinedArgs = string.Join(" ", args);
+
+//             // Разделяем строку по запятой с пробелом и преобразуем в массив целых чисел
+//             array = joinedArgs.Split(", ")
+//                                   .Select(int.Parse)
+//                                   .ToArray();
+            
+//             // Теперь arr содержит преобразованные в целые числа из командной строки
+        
+//         } else {
+//            // Если аргументов на входе нет
+//             array = new int[] {2, 5, 2, 3, 6, 3, 7, 8, 2, 4}; // Создание массива
 //         }
 //         UserInputToCompileForTest.PrintResult(array);
 //     }
